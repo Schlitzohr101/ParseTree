@@ -5,8 +5,8 @@ class Divide : public Operator {
 public:
     Divide();
     ~Divide();
-    int Evaluate(int,int);
-    int Evaluate();
+    int Evaluate(int,int) override;
+    int Evaluate() override;
 };
 
 Divide::Divide()

@@ -8,4 +8,4 @@ public:
     virtual int Evaluate(int,int) =0;
 };
 
-#endif
+#endif  

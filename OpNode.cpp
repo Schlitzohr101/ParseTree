@@ -1,4 +1,5 @@
-#include "header.h"
+#include "OpNode.h"
+
 
 OpNode::OpNode(Operator &opt)
 {

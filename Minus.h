@@ -6,7 +6,7 @@ public:
     Minus();
     ~Minus();
     int Evaluate(int,int) override;
-    int Evaluate();
+    int Evaluate() override;
 };
 
 Minus::Minus() {}
@@ -18,5 +18,7 @@ Minus::~Minus()
 int Minus::Evaluate(int num, int num1) {
     return num - num1;
 }
+
+int Minus::Evaluate()
 
 #endif
