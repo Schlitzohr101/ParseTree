@@ -1,11 +1,16 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
+#include <iostream>
 
 class Operator
 {
 public:
-    virtual int Evaluate() =0;
-    virtual int Evaluate(int,int) =0;
+    virtual int Evaluate() {
+        std::cout << "USING OPERATOR EVALUATE()" << std::endl;
+        return -1;};
+    virtual int Evaluate(int,int) {
+        std::cout << "USING OPERATOR EVALUATE(INT,INT)" << std::endl;
+        return -1;};
 };
 
 #endif  

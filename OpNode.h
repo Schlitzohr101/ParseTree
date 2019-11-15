@@ -9,12 +9,12 @@ private:
     OpNode * parent;
     Operator * val;
 public:
-    OpNode(Operator&);
+    OpNode(Operator*);
     ~OpNode();
     void setLeft(OpNode*);
     void setRight(OpNode*);
     void setParent(OpNode*);
-    void setOperator(Operator&);
+    void setOperator(Operator*);
     OpNode* peekLeft();
     OpNode* peekRight();
     OpNode* peekParent();

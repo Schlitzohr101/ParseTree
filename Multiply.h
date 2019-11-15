@@ -4,19 +4,8 @@
 class Multiply : public Operator {
 
 public:
-    Multiply();
-    ~Multiply();
-    int Evaluate(int,int);
-    int Evaluate();
+    int Evaluate(int,int) override;
 };
-
-Multiply::Multiply()
-{
-}
-
-Multiply::~Multiply()
-{
-}
 
 int Multiply::Evaluate(int num, int num1) {
     return num * num1;

@@ -1,9 +1,12 @@
 #include "OpNode.h"
 
 
-OpNode::OpNode(Operator &opt)
+OpNode::OpNode(Operator * opt)
 {
-    val = &opt;
+    val = opt;
+    left = nullptr;
+    right = nullptr;
+    parent = nullptr;
 }
 
 OpNode::~OpNode()
@@ -26,8 +29,8 @@ void OpNode::setParent(OpNode * p) {
     parent = p;
 }
 
-void OpNode::setOperator(Operator &opt) {
-    val = &opt;
+void OpNode::setOperator(Operator *opt) {
+    val = opt;
 }
 
 OpNode * OpNode::peekLeft() {

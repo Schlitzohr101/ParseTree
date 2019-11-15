@@ -7,18 +7,12 @@ private:
     int num;
 public:
     Integer(int val);
-    ~Integer();
-    int Evaluate();
-    int Evaluate(int,int);
+    int Evaluate() override;
 };
 
 Integer::Integer(int val)
 {
     num = val;
-}
-
-Integer::~Integer()
-{
 }
 
 int Integer::Evaluate() {
