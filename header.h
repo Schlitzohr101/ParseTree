@@ -11,6 +11,7 @@
 #include "ParseTree.h"
 #include <string>
 #include <vector>
+#include <typeinfo>
 
 using namespace std;
 

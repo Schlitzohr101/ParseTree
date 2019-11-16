@@ -14,7 +14,7 @@ public:
     void deleteTree();
 protected:
     int getCount(OpNode *);
-    void add(OpNode *);
+    void add(OpNode *,OpNode*);
     void deleteNode(OpNode *);
 };
 
