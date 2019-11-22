@@ -1,5 +1,7 @@
 #include "header.h"
 
+
+
 ParseTree::ParseTree() {
     root = nullptr;
 }
@@ -10,7 +12,7 @@ ParseTree::~ParseTree() {
 }
 
 Operator * ParseTree::getRoot() {
-    return (root == nullptr? nullptr:root->peekVal());
+    return (root == nullptr? nullptr : root->peekVal());
 }
 
 int ParseTree::getCount() {
@@ -28,14 +30,19 @@ void ParseTree::add(Operator * op) {
     OpNode * node = new OpNode(op);
     if (getRoot() == nullptr) {
         root = node;
+        node->setParent(root);
     } else {
         add(root,node);
     }
 }
 
 void ParseTree::add(OpNode * node,OpNode * addNode ) {
-    //first chedck type of addNode
-    if (typeid(addNode).hash_code() == typeid(Integer).hash_code()) {
-
+    //if node to add to is not integer then it is operator,
+    //first check if the node that is being compared to is not a int, i.e. its an operator
+    if (typeid(*node->peekVal()).hash_code() != typeid(Integer).hash_code()) {
+        //if it is a operator then we should check if we are a int
+        if (typeid(*addNode->peekVal()).hash_code() == typeid(Integer).hash_code()) {
+            
+        }
     }
 }

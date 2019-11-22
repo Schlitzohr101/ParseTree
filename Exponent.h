@@ -8,8 +8,4 @@ public:
     int Evaluate(int,int) override;
 };
 
-int Exponent::Evaluate(int num, int num1) {
-    return int(pow(float(num),float(num1)));
-}
-
 #endif

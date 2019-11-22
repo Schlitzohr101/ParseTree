@@ -6,12 +6,13 @@
 #include "Multiply.h"//May be poor performance, but Operator is small
 #include "Divide.h" 
 #include "Exponent.h"
-#include "Integer.h"
-#include "OpNode.h"
 #include "ParseTree.h"
+#include "Integer.h"
 #include <string>
 #include <vector>
 #include <typeinfo>
+#include <bits/stdc++.h> 
+
 
 using namespace std;
 
@@ -19,6 +20,8 @@ using namespace std;
 typedef Operator * (*OptfuncPtr)();
 
 int charToInt(char);
+
+int getMultDigit(string, int&);
 
 
 #endif

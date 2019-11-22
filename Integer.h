@@ -10,13 +10,4 @@ public:
     int Evaluate() override;
 };
 
-Integer::Integer(int val)
-{
-    num = val;
-}
-
-int Integer::Evaluate() {
-    return num;
-}
-
 #endif

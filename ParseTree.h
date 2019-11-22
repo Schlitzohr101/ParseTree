@@ -5,6 +5,7 @@ class ParseTree
 {
 private:
     OpNode * root;
+    bool addToRoot();
 public:
     ParseTree();
     ~ParseTree();
@@ -16,6 +17,8 @@ protected:
     int getCount(OpNode *);
     void add(OpNode *,OpNode*);
     void deleteNode(OpNode *);
+    void swapLeft(OpNode*,OpNode*);
+    void swapRight(OpNode*,OpNode*);
 };
 
 #endif
