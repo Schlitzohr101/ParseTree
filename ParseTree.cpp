@@ -1,6 +1,4 @@
-#include "header.h"
-
-
+#include "ParseTree.h"
 
 ParseTree::ParseTree() {
     root = nullptr;
@@ -26,23 +24,41 @@ int ParseTree::getCount(OpNode * node) {
     return 1 + getCount(node->peekLeft()) + getCount(node->peekRight());
 }
 
-void ParseTree::add(Operator * op) {
-    OpNode * node = new OpNode(op);
+void ParseTree::add(OpNode * op) {
     if (getRoot() == nullptr) {
-        root = node;
-        node->setParent(root);
+        root = op;
+        op->setParent(root);
     } else {
-        add(root,node);
+        root == nullptr;
     }
 }
 
-void ParseTree::add(OpNode * node,OpNode * addNode ) {
-    //if node to add to is not integer then it is operator,
-    //first check if the node that is being compared to is not a int, i.e. its an operator
-    if (typeid(*node->peekVal()).hash_code() != typeid(Integer).hash_code()) {
-        //if it is a operator then we should check if we are a int
-        if (typeid(*addNode->peekVal()).hash_code() == typeid(Integer).hash_code()) {
-            
-        }
-    }
+int ParseTree::Evaluate() {
+   // std::cout << "Evaluating the ParseTree\n";
+    return Evaluate(root);
 }
+
+int ParseTree::Evaluate(OpNode* node) {
+    int partial;
+    if (typeid(*node->peekVal()).hash_code() == typeid(Integer).hash_code()) {
+        //std::cout << "getting int val\n";
+        partial = node->peekVal()->Evaluate();
+        //std::cout << "Partial: " << partial << std::endl;
+    } else {
+        //std::cout << "not a int, so evaluating its sub values\n";
+        partial = node->peekVal()->Evaluate(Evaluate(node->peekLeft()),Evaluate(node->peekRight()));
+        //std:: cout << "partial: " << partial << std::endl;
+    }
+    return partial;
+}
+
+// void ParseTree::add(OpNode * node,OpNode * addNode ) {
+//     //if node to add to is not integer then it is operator,
+//     //first check if the node that is being compared to is not a int, i.e. its an operator
+//     if (typeid(*node->peekVal()).hash_code() != typeid(Integer).hash_code()) {
+//         //if it is a operator then we should check if we are a int
+//         if (typeid(*addNode->peekVal()).hash_code() == typeid(Integer).hash_code()) {
+            
+//         }
+//     }
+// }

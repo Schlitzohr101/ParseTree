@@ -11,6 +11,7 @@ public:
     virtual int Evaluate(int,int) {
         std::cout << "USING OPERATOR EVALUATE(INT,INT)" << std::endl;
         return -1;};
+    virtual int getPriority() = 0;
 };
 
 #endif  

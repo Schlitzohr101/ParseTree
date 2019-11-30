@@ -7,21 +7,25 @@
 #include "Divide.h" 
 #include "Exponent.h"
 #include "ParseTree.h"
-#include "Integer.h"
 #include <string>
 #include <vector>
+#include <stack>
+#include <cstring>
 #include <typeinfo>
 #include <bits/stdc++.h> 
 
 
 using namespace std;
 
-//may be used later
+//may be used later for a map of pointers
 typedef Operator * (*OptfuncPtr)();
 
 int charToInt(char);
 
 int getMultDigit(string, int&);
 
+vector<OpNode *> parsePostFix(vector<OpNode*>);
+
+OpNode* constructTree(vector<OpNode*>);
 
 #endif

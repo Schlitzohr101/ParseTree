@@ -1,6 +1,7 @@
 #ifndef PARSETREE_H
 #define PARSETREE_H
 #include "OpNode.h"
+#include "Integer.h"
 class ParseTree
 {
 private:
@@ -11,14 +12,16 @@ public:
     ~ParseTree();
     Operator * getRoot();
     int getCount();
-    void add(Operator *);
+    void add(OpNode *);
     void deleteTree();
+    int Evaluate();
+
 protected:
     int getCount(OpNode *);
-    void add(OpNode *,OpNode*);
     void deleteNode(OpNode *);
     void swapLeft(OpNode*,OpNode*);
     void swapRight(OpNode*,OpNode*);
+    int Evaluate(OpNode*);
 };
 
 #endif

@@ -10,7 +10,8 @@ private:
     Operator * val;
 public:
     OpNode(Operator*);
-    ~OpNode();
+    //~OpNode();
+    OpNode(const OpNode&);
     void setLeft(OpNode*);
     void setRight(OpNode*);
     void setParent(OpNode*);
@@ -19,5 +20,6 @@ public:
     OpNode* peekRight();
     OpNode* peekParent();
     Operator* peekVal();
+    int getPri();
 };
 #endif

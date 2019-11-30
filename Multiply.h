@@ -5,7 +5,7 @@ class Multiply : public Operator {
 
 public:
     int Evaluate(int,int) override;
+    int getPriority() override;
 };
-
 
 #endif

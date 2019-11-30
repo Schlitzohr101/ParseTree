@@ -9,13 +9,20 @@ OpNode::OpNode(Operator * opt)
     parent = nullptr;
 }
 
-OpNode::~OpNode()
-{
-    delete left;
-    delete right;
-    delete parent;
-    delete val;
+OpNode::OpNode(const OpNode &temp) {
+    val = temp.val;
+    right = temp.right;
+    left = temp.left;
+    parent = temp.parent;
 }
+
+// OpNode::~OpNode()
+// {
+//     delete left;
+//     delete right;
+//     delete parent;
+//     delete val;
+// }
 
 void OpNode::setLeft(OpNode * l) {
     left = l;
@@ -25,8 +32,8 @@ void OpNode::setRight(OpNode * r) {
     right = r;
 }
 
-void OpNode::setParent(OpNode * p) {
-    parent = p;
+void OpNode::setParent(OpNode * prnt) {
+    parent = prnt;
 }
 
 void OpNode::setOperator(Operator *opt) {
@@ -47,4 +54,8 @@ OpNode * OpNode::peekParent() {
 
 Operator * OpNode::peekVal() {
     return val;
+}
+
+int OpNode::getPri() {
+    return val->getPriority();
 }
