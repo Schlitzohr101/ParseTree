@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef EXPONENT_H
 #define EXPONENT_H
 #include <math.h>

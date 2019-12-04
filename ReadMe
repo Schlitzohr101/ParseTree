@@ -1,0 +1,8 @@
+ 
+BUILD:
+
+g++ *.h && g++ *.cpp
+
+run: 
+
+./a.out

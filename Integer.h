@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef INTEGER_H
 #define INTEGER_H
 #include "Operator.h"

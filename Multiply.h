@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef MULTIPLY_H
 #define MULTIPLY_H
 #include "Operator.h"

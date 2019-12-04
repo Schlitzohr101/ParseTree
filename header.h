@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef HEADER_H
 #define HEADER_H
 //Main header file used for inculeds of all dependencies

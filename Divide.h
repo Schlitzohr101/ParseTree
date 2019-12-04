@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef DIVIDE_H
 #define DIVIDE_H
 #include "Operator.h"

@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #include "ParseTree.h"
 
 ParseTree::ParseTree() {

@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef OPNODE_H
 #define OPNODE_H
 #include "Operator.h"

@@ -1,3 +1,5 @@
+//William Murray
+//John Miner
 #ifndef MINUS_H
 #define MINUS_H
 #include "Operator.h"
